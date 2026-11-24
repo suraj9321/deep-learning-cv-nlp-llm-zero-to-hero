@@ -29,6 +29,8 @@ from pathlib import Path
 import nbformat
 from nbformat.v4 import new_code_cell, new_markdown_cell, new_notebook
 
+from papers import reading_cell_markdown  # tools/papers.py: recommended reading per module
+
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "tools" / "src"
 OUT = ROOT / "modules"
@@ -128,7 +130,11 @@ def build(module_dir: Path, run: bool):
     ex_src = module_dir / "exercises.py"
     targets = []
     if lesson_src.exists():
-        nbformat.write(make_notebook(parse_cells(lesson_src.read_text()), "solution"), dest / "lesson.ipynb")
+        cells = parse_cells(lesson_src.read_text())
+        reading = reading_cell_markdown(name[:2])
+        if reading:
+            cells.append(("markdown", reading))   # appended at the end of every lesson
+        nbformat.write(make_notebook(cells, "solution"), dest / "lesson.ipynb")
         targets.append(dest / "lesson.ipynb")
     if ex_src.exists():
         cells = parse_cells(ex_src.read_text())
