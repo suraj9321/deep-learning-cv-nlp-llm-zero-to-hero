@@ -23,6 +23,9 @@ jupyter lab
 
 Every notebook's first cell picks the best device automatically: CUDA, then MPS, then CPU.
 
+Optional - Classic ML before Deep Learning 
+**Classical ML**: [`classical-machine-learning-basic-to-advanced-in-steps`](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps)
+
 ## Running on Colab (only for modules marked "Colab recommended")
 
 1. Open https://colab.research.google.com, then File → Upload notebook.
