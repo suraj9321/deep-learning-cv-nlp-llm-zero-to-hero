@@ -2,6 +2,11 @@
 
 A hands-on PyTorch course. It follows the classical ML course in `../machine-learning-learning`.
 
+
+Optional - Classic ML before Deep Learning 
+**Classical ML**: [`classical-machine-learning-basic-to-advanced-in-steps`](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps)
+
+
 Each module in `modules/` has three notebooks:
 
 - `lesson.ipynb`: a worked lesson. Run it top to bottom and experiment with it.
@@ -22,9 +27,6 @@ jupyter lab
 ```
 
 Every notebook's first cell picks the best device automatically: CUDA, then MPS, then CPU.
-
-Optional - Classic ML before Deep Learning 
-**Classical ML**: [`classical-machine-learning-basic-to-advanced-in-steps`](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps)
 
 ## Running on Colab (only for modules marked "Colab recommended")
 
