@@ -247,6 +247,52 @@ PAPERS = {
         ("Survey of Hallucination in Natural Language Generation", "Ji et al., 2022", arxiv("2202.03629"), "Why models make things up.", False),
     ],
     "29": [
+        ("Learning Transferable Visual Models From Natural Language Supervision (CLIP)", "Radford et al., 2021",
+         arxiv("2103.00020"), "The model you build a mini version of.", True),
+        ("Representation Learning with Contrastive Predictive Coding (InfoNCE)", "van den Oord, Li & Vinyals, 2018",
+         arxiv("1807.03748"), "Where the contrastive loss comes from.", True),
+        ("Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision (ALIGN)",
+         "Jia et al., 2021", arxiv("2102.05918"), "CLIP-style training on noisier, bigger data.", False),
+        ("Sigmoid Loss for Language Image Pre-Training (SigLIP)", "Zhai et al., 2023", arxiv("2303.15343"),
+         "A simpler loss that drops the softmax over the batch.", False),
+        ("Reproducible Scaling Laws for Contrastive Language-Image Learning (OpenCLIP)", "Cherti et al., 2022",
+         arxiv("2212.07143"), "The open models used in this module.", False),
+    ],
+    "30": [
+        ("Show and Tell: A Neural Image Caption Generator", "Vinyals et al., 2014", arxiv("1411.4555"),
+         "The original encoder–decoder captioner.", True),
+        ("Show, Attend and Tell: Neural Image Caption Generation with Visual Attention", "Xu et al., 2015",
+         arxiv("1502.03044"), "Attending to image regions while generating.", True),
+        ("BLIP: Bootstrapping Language-Image Pre-training", "Li et al., 2022", arxiv("2201.12086"),
+         "The pretrained captioner used as a reference.", False),
+        ("CIDEr: Consensus-based Image Description Evaluation", "Vedantam, Zitnick & Parikh, 2014", arxiv("1411.5726"),
+         "The captioning metric, and what it rewards.", False),
+    ],
+    "31": [
+        ("Visual Instruction Tuning (LLaVA)", "Liu et al., 2023", arxiv("2304.08485"),
+         "Vision encoder → projector → LLM: the architecture you build.", True),
+        ("Flamingo: a Visual Language Model for Few-Shot Learning", "Alayrac et al., 2022", arxiv("2204.14198"),
+         "Feeding images to a frozen LLM with cross-attention.", True),
+        ("BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and LLMs", "Li et al., 2023",
+         arxiv("2301.12597"), "The Q-Former bridge between frozen models.", False),
+        ("Improved Baselines with Visual Instruction Tuning (LLaVA-1.5)", "Liu et al., 2023", arxiv("2310.03744"),
+         "Simple changes that make LLaVA much better.", False),
+        ("Evaluating Object Hallucination in Large Vision-Language Models (POPE)", "Li et al., 2023",
+         arxiv("2305.10355"), "When VLMs describe objects that are not there.", False),
+    ],
+    "32": [
+        ("Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)", "Radford et al., 2022",
+         arxiv("2212.04356"), "The speech recognizer you use.", True),
+        ("Connectionist Temporal Classification", "Graves et al., 2006", "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
+         "Training on audio without frame-level alignments.", True),
+        ("wav2vec 2.0: Self-Supervised Learning of Speech Representations", "Baevski et al., 2020",
+         arxiv("2006.11477"), "Self-supervised pretraining on raw audio.", False),
+        ("CLAP: Learning Audio Concepts From Natural Language Supervision", "Elizalde et al., 2022",
+         arxiv("2206.04769"), "CLIP for sound.", False),
+        ("SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition", "Park et al., 2019",
+         arxiv("1904.08779"), "Augmenting spectrograms.", False),
+    ],
+    "33": [
         ("A Recipe for Training Neural Networks (blog post)", "Karpathy, 2019",
          "http://karpathy.github.io/2019/04/25/recipe/", "Reread it before starting your project.", True),
     ],
@@ -266,6 +312,8 @@ _MIT = "https://introtodeeplearning.com/"
 _FASTAI_P2 = "https://course.fast.ai/Lessons/part2.html"
 _HF_LLM = "https://huggingface.co/learn/llm-course"
 _HF_DIFF = "https://huggingface.co/learn/diffusion-course"
+_HF_CV = "https://huggingface.co/learn/computer-vision-course/unit4/multimodal-models/"
+_HF_AUDIO = "https://huggingface.co/learn/audio-course/"
 
 VIDEOS = {
     "01": [
@@ -401,6 +449,29 @@ VIDEOS = {
     "28": [
         ("LLM Course (semantic search and embeddings sections)", "Hugging Face", _HF_LLM, "Embeddings and search in code.", True),
         ("Large Language Models explained briefly", "3Blue1Brown", _3B1B + "mini-llm", "A short refresher before building RAG.", False),
+    ],
+    "29": [
+        ("Community Computer Vision Course: CLIP and relatives", "Hugging Face", _HF_CV + "clip-and-relatives/clip",
+         "CLIP explained, with code.", True),
+        ("Vision and Language lecture (slides)", "Stanford CS231n", "https://cs231n.stanford.edu/schedule.html",
+         "Where contrastive pretraining fits among vision-language methods.", False),
+    ],
+    "30": [
+        ("Recurrent Neural Networks lecture (image captioning and soft attention)", "Stanford CS231n", _CS231N,
+         "Captioning with an encoder and a decoder, and attention over the image.", True),
+        ("Community Computer Vision Course: multimodal tasks and models", "Hugging Face",
+         _HF_CV + "tasks-models-part1", "Captioning, VQA and the models behind them.", False),
+    ],
+    "31": [
+        ("Community Computer Vision Course: introduction to vision language models", "Hugging Face",
+         _HF_CV + "vlm-intro", "How VLMs are put together.", True),
+        ("Multimodality guest lecture", "Stanford CS224n", _CS224N, "Mixed-modal LLMs, from the NLP side.", False),
+    ],
+    "32": [
+        ("Audio Course (chapter 1: working with audio data)", "Hugging Face", _HF_AUDIO + "chapter1/audio_data",
+         "Waveforms, sampling and spectrograms.", True),
+        ("Audio Course (chapter 5: automatic speech recognition)", "Hugging Face", _HF_AUDIO + "chapter5/introduction",
+         "Speech recognition with Whisper in practice.", False),
     ],
 }
 

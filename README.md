@@ -1,4 +1,4 @@
-# Deep Learning: Basics → Computer Vision → Generative Models → NLP & LLMs
+# Deep Learning: Basics → Computer Vision → Generative Models → NLP & LLMs → Multimodal AI
 
 A hands-on PyTorch course. It follows the classical ML course in `../machine-learning-learning`.
 
@@ -34,7 +34,7 @@ Every notebook's first cell picks the best device automatically: CUDA, then MPS,
 Tick each module off as you finish it. Status: ✅ built · 🚧 not built yet. _(Colab recommended)_ marks the
 modules that are slow on a laptop. Under each module, 🎥 lists recommended videos and 📄 recommended papers
 (⭐ = start here; the others are optional). The same lists appear at the end of each lesson notebook, with a note on
-why each one is worth your time.
+why each one is worth your time. Click a phase's summary line to expand its modules.
 
 **Phases at a glance**
 
@@ -43,9 +43,13 @@ why each one is worth your time.
 3. [Phase 2: Computer vision](#phase-2-computer-vision-) 🚧 (modules 07–14)
 4. [Phase 3: Generative models](#phase-3-generative-models-) 🚧 (modules 15–20)
 5. [Phase 4: NLP and large language models](#phase-4-nlp-and-large-language-models-) 🚧 (modules 21–28)
-6. [Phase 5: Capstone](#phase-5-capstone-) 🚧 (module 29)
+6. [Phase 5: Multimodal AI](#phase-5-multimodal-ai-) 🚧 (modules 29–32)
+7. [Phase 6: Capstone](#phase-6-capstone-) 🚧 (module 33)
 
 ### Phase 0: Bridge from classical ML ✅
+
+<details>
+<summary>Module 00: PyTorch tensors, shapes and devices</summary>
 
 - [ ] **00 PyTorch tensors and devices**
   - Creating tensors; converting between NumPy and PyTorch (when memory is shared)
@@ -57,7 +61,12 @@ why each one is worth your time.
   - 📄 **Recommended reading**
     - [PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/abs/1912.01703) (Paszke et al., 2019)
 
+</details>
+
 ### Phase 1: Neural network foundations ✅
+
+<details>
+<summary>Modules 01–06: perceptron, backprop, autograd, training loop, optimization, regularization</summary>
 
 - [ ] **01 Perceptron and MLP in NumPy**
   - A neuron as weighted sum + activation; sigmoid, tanh, ReLU
@@ -70,8 +79,8 @@ why each one is worth your time.
     - [Introduction to Deep Learning (lecture 1)](https://introtodeeplearning.com/) (MIT 6.S191)
   - 📄 **Recommended reading**
     - [The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain](https://doi.org/10.1037/h0042519) (Rosenblatt, 1958)
-    - [Multilayer Feedforward Networks are Universal Approximators](<https://doi.org/10.1016/0893-6080(89)90020-8>) (Hornik, Stinchcombe & White, 1989)
-    - _Rectified Linear Units Improve Restricted Boltzmann Machines_ (Nair & Hinton, 2010)
+    - [Multilayer Feedforward Networks are Universal Approximators](https://doi.org/10.1016/0893-6080(89)90020-8) (Hornik, Stinchcombe & White, 1989)
+    - *Rectified Linear Units Improve Restricted Boltzmann Machines* (Nair & Hinton, 2010)
 - [ ] **02 Backpropagation**
   - Computational graphs and the chain rule ("upstream × local")
   - Gradients for linear layers, ReLU, sigmoid + BCE, softmax + cross-entropy
@@ -136,7 +145,12 @@ why each one is worth your time.
     - [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101) (Loshchilov & Hutter, 2017)
     - [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530) (Zhang et al., 2016)
 
+</details>
+
 ### Phase 2: Computer vision 🚧
+
+<details>
+<summary>Modules 07–14: convolutions, CNNs, modern architectures, transfer learning, interpretability, detection, segmentation, ViT</summary>
 
 - [ ] **07 Convolutions from scratch**
   - Kernels and feature detection (edges, blur), stride, padding, output-size formula
@@ -155,7 +169,7 @@ why each one is worth your time.
     - ⭐ [Deep Computer Vision](https://introtodeeplearning.com/) (MIT 6.S191)
     - [Lecture 5: Convolutional Neural Networks](https://cs231n.stanford.edu/2017/syllabus.html) (Stanford CS231n (2017))
   - 📄 **Recommended reading**
-    - ⭐ _ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)_ (Krizhevsky, Sutskever & Hinton, 2012)
+    - ⭐ *ImageNet Classification with Deep Convolutional Neural Networks (AlexNet)* (Krizhevsky, Sutskever & Hinton, 2012)
     - [Visualizing and Understanding Convolutional Networks](https://arxiv.org/abs/1311.2901) (Zeiler & Fergus, 2013)
 - [ ] **09 Modern CNN architectures**
   - VGG (stacking 3×3 convolutions), why plain deep networks degrade
@@ -222,7 +236,12 @@ why each one is worth your time.
     - ⭐ [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (ViT)](https://arxiv.org/abs/2010.11929) (Dosovitskiy et al., 2020)
     - [Training Data-Efficient Image Transformers (DeiT)](https://arxiv.org/abs/2012.12877) (Touvron et al., 2020)
 
+</details>
+
 ### Phase 3: Generative models 🚧
+
+<details>
+<summary>Modules 15–20: autoencoders, VAEs, GANs, advanced GANs, diffusion, latent diffusion</summary>
 
 - [ ] **15 Autoencoders**
   - Encoder–bottleneck–decoder; undercomplete and convolutional autoencoders
@@ -233,7 +252,7 @@ why each one is worth your time.
     - [Lecture 13: Generative Models](https://cs231n.stanford.edu/2017/syllabus.html) (Stanford CS231n (2017))
   - 📄 **Recommended reading**
     - ⭐ [Reducing the Dimensionality of Data with Neural Networks](https://doi.org/10.1126/science.1127647) (Hinton & Salakhutdinov, 2006)
-    - _Extracting and Composing Robust Features with Denoising Autoencoders_ (Vincent et al., 2008)
+    - *Extracting and Composing Robust Features with Denoising Autoencoders* (Vincent et al., 2008)
 - [ ] **16 Variational autoencoders**
   - Probabilistic latent variables; the reparameterization trick
   - The ELBO: reconstruction loss + KL divergence, derived step by step
@@ -296,7 +315,12 @@ why each one is worth your time.
     - [Diffusion Models Beat GANs on Image Synthesis](https://arxiv.org/abs/2105.05233) (Dhariwal & Nichol, 2021)
     - [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](https://arxiv.org/abs/2103.00020) (Radford et al., 2021)
 
+</details>
+
 ### Phase 4: NLP and large language models 🚧
+
+<details>
+<summary>Modules 21–28: word embeddings, RNNs, seq2seq, Transformers, GPT from scratch, Hugging Face, LoRA fine-tuning, RAG</summary>
 
 - [ ] **21 Text representation and word embeddings**
   - Tokenization basics (characters, words, subwords), vocabularies, padding and batching text
@@ -403,15 +427,89 @@ why each one is worth your time.
     - [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) (Liu et al., 2023)
     - [Survey of Hallucination in Natural Language Generation](https://arxiv.org/abs/2202.03629) (Ji et al., 2022)
 
-### Phase 5: Capstone 🚧
+</details>
 
-- [ ] **29 Capstone project** (pick one)
+### Phase 5: Multimodal AI 🚧
+
+<details>
+<summary>Modules 29–32: CLIP, image captioning, vision-language models, audio and speech</summary>
+
+- [ ] **29 Contrastive image–text learning (CLIP)**
+  - Shared embedding spaces: why put images and text in the same vector space
+  - The symmetric contrastive (InfoNCE) loss from scratch; temperature and batch size
+  - Train a mini-CLIP (small image encoder + text encoder) on a small captioned dataset
+  - Zero-shot classification and text↔image retrieval with a pretrained CLIP (`open_clip` / Hugging Face)
+  - Prompt templates and prompt ensembling; failure modes (bias, typographic attacks)
+  - 🎥 **Recommended videos**
+    - ⭐ [Community Computer Vision Course: CLIP and relatives](https://huggingface.co/learn/computer-vision-course/unit4/multimodal-models/clip-and-relatives/clip) (Hugging Face)
+    - [Vision and Language lecture (slides)](https://cs231n.stanford.edu/schedule.html) (Stanford CS231n)
+  - 📄 **Recommended reading**
+    - ⭐ [Learning Transferable Visual Models From Natural Language Supervision (CLIP)](https://arxiv.org/abs/2103.00020) (Radford et al., 2021)
+    - ⭐ [Representation Learning with Contrastive Predictive Coding (InfoNCE)](https://arxiv.org/abs/1807.03748) (van den Oord, Li & Vinyals, 2018)
+    - [Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision (ALIGN)](https://arxiv.org/abs/2102.05918) (Jia et al., 2021)
+    - [Sigmoid Loss for Language Image Pre-Training (SigLIP)](https://arxiv.org/abs/2303.15343) (Zhai et al., 2023)
+    - [Reproducible Scaling Laws for Contrastive Language-Image Learning (OpenCLIP)](https://arxiv.org/abs/2212.07143) (Cherti et al., 2022)
+- [ ] **30 Image captioning** _(Colab recommended)_
+  - Encoder–decoder captioning: a pretrained vision encoder plus a Transformer decoder
+  - Cross-attention from text tokens to image patches; visualizing where the model looks
+  - Teacher forcing for training; greedy decoding and beam search for generation
+  - Evaluating with BLEU and CIDEr, and why those metrics fall short
+  - BLIP as a pretrained reference to compare against
+  - 🎥 **Recommended videos**
+    - ⭐ [Recurrent Neural Networks lecture (image captioning and soft attention)](https://cs231n.stanford.edu/2017/syllabus.html) (Stanford CS231n)
+    - [Community Computer Vision Course: multimodal tasks and models](https://huggingface.co/learn/computer-vision-course/unit4/multimodal-models/tasks-models-part1) (Hugging Face)
+  - 📄 **Recommended reading**
+    - ⭐ [Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555) (Vinyals et al., 2014)
+    - ⭐ [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044) (Xu et al., 2015)
+    - [BLIP: Bootstrapping Language-Image Pre-training](https://arxiv.org/abs/2201.12086) (Li et al., 2022)
+    - [CIDEr: Consensus-based Image Description Evaluation](https://arxiv.org/abs/1411.5726) (Vedantam, Zitnick & Parikh, 2014)
+- [ ] **31 Vision-language models** _(Colab recommended)_
+  - LLaVA-style architecture: frozen vision encoder → projector → LLM; image tokens in the LLM's context
+  - Build and train the projector on a small image–text set
+  - Visual instruction tuning with LoRA (builds on module 27)
+  - Visual question answering with a pretrained small VLM
+  - Evaluating VLMs; object hallucination and how to measure it
+  - 🎥 **Recommended videos**
+    - ⭐ [Community Computer Vision Course: introduction to vision language models](https://huggingface.co/learn/computer-vision-course/unit4/multimodal-models/vlm-intro) (Hugging Face)
+    - [Multimodality guest lecture](https://web.stanford.edu/class/cs224n/) (Stanford CS224n)
+  - 📄 **Recommended reading**
+    - ⭐ [Visual Instruction Tuning (LLaVA)](https://arxiv.org/abs/2304.08485) (Liu et al., 2023)
+    - ⭐ [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198) (Alayrac et al., 2022)
+    - [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and LLMs](https://arxiv.org/abs/2301.12597) (Li et al., 2023)
+    - [Improved Baselines with Visual Instruction Tuning (LLaVA-1.5)](https://arxiv.org/abs/2310.03744) (Liu et al., 2023)
+    - [Evaluating Object Hallucination in Large Vision-Language Models (POPE)](https://arxiv.org/abs/2305.10355) (Li et al., 2023)
+- [ ] **32 Audio and speech**
+  - Waveforms and sampling; the STFT and (log-)mel spectrograms
+  - A small CNN audio classifier on spectrograms; SpecAugment
+  - Speech recognition with Whisper (an encoder–decoder over spectrograms); CTC in brief
+  - Audio–text contrastive learning (CLAP): CLIP for sound
+  - 🎥 **Recommended videos**
+    - ⭐ [Audio Course (chapter 1: working with audio data)](https://huggingface.co/learn/audio-course/chapter1/audio_data) (Hugging Face)
+    - [Audio Course (chapter 5: automatic speech recognition)](https://huggingface.co/learn/audio-course/chapter5/introduction) (Hugging Face)
+  - 📄 **Recommended reading**
+    - ⭐ [Robust Speech Recognition via Large-Scale Weak Supervision (Whisper)](https://arxiv.org/abs/2212.04356) (Radford et al., 2022)
+    - ⭐ [Connectionist Temporal Classification](https://www.cs.toronto.edu/~graves/icml_2006.pdf) (Graves et al., 2006)
+    - [wav2vec 2.0: Self-Supervised Learning of Speech Representations](https://arxiv.org/abs/2006.11477) (Baevski et al., 2020)
+    - [CLAP: Learning Audio Concepts From Natural Language Supervision](https://arxiv.org/abs/2206.04769) (Elizalde et al., 2022)
+    - [SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition](https://arxiv.org/abs/1904.08779) (Park et al., 2019)
+
+</details>
+
+### Phase 6: Capstone 🚧
+
+<details>
+<summary>Module 33: pick a vision, generative, language or multimodal project</summary>
+
+- [ ] **33 Capstone project** (pick one)
   - (a) Vision: fine-tune and evaluate a classifier or segmenter on your own dataset, with Grad-CAM analysis
   - (b) Generative: train a conditional diffusion model or VAE on a small dataset
   - (c) Language: fine-tune a small LLM with LoRA for a task of your choice, or build and evaluate a RAG system
+  - (d) Multimodal: build an image–text or audio–text retrieval system, or fine-tune a small VLM for a task of your choice
   - Guided checklist: data → baseline → improvements → evaluation → write-up, plus a reference solution
   - 📄 **Recommended reading**
     - ⭐ [A Recipe for Training Neural Networks (blog post)](http://karpathy.github.io/2019/04/25/recipe/) (Karpathy, 2019)
+
+</details>
 
 ## For maintainers: rebuilding notebooks
 
@@ -432,4 +530,5 @@ Most video links go to the official course or lesson page, which links to the vi
 [Stanford CS236](https://deepgenerativemodels.github.io/) ·
 [MIT 6.S191](https://introtodeeplearning.com/) ·
 [fast.ai](https://course.fast.ai/) ·
-[Hugging Face LLM course](https://huggingface.co/learn/llm-course) and [diffusion course](https://huggingface.co/learn/diffusion-course).
+Hugging Face [LLM](https://huggingface.co/learn/llm-course), [diffusion](https://huggingface.co/learn/diffusion-course),
+[computer vision](https://huggingface.co/learn/computer-vision-course) and [audio](https://huggingface.co/learn/audio-course) courses.
