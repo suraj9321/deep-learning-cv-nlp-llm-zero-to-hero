@@ -1,11 +1,15 @@
 # Deep Learning: Basics → Computer Vision → Generative Models → NLP & LLMs → Multimodal AI
 
-A hands-on PyTorch course. It follows the classical ML course in `../machine-learning-learning`.
+A hands-on, zero-to-hero deep learning course in PyTorch. You start with tensors and a perceptron written in NumPy.
+Then you build up to CNNs and Vision Transformers, VAEs, GANs and diffusion models, a GPT written from scratch,
+LoRA fine-tuning and RAG, and multimodal models such as CLIP, vision-language models and Whisper. It finishes with
+a capstone project of your choice. Every module is a set of Jupyter notebooks that run on a Mac (Apple Silicon/MPS)
+or on Colab.
 
-
-Optional - Classic ML before Deep Learning 
-**Classical ML**: [`classical-machine-learning-basic-to-advanced-in-steps`](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps)
-
+> **New to machine learning?** Start with the companion course,
+> [Classical Machine Learning: basic to advanced in steps](https://github.com/suraj9321/classical-machine-learning-basic-to-advanced-in-steps).
+> It covers math refreshers, data handling, supervised and unsupervised learning, and practical ML, using NumPy and
+> scikit-learn in the same lesson → exercises → solutions format. If you already know classical ML, you can skip it.
 
 Each module in `modules/` has three notebooks:
 
@@ -537,3 +541,7 @@ Most video links go to the official course or lesson page, which links to the vi
 [fast.ai](https://course.fast.ai/) ·
 Hugging Face [LLM](https://huggingface.co/learn/llm-course), [diffusion](https://huggingface.co/learn/diffusion-course),
 [computer vision](https://huggingface.co/learn/computer-vision-course) and [audio](https://huggingface.co/learn/audio-course) courses.
+
+## License
+
+[MIT](LICENSE). You are free to use, adapt and share these notebooks, including for teaching. Please keep the copyright notice.
