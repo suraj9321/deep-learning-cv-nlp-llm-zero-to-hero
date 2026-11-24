@@ -1,0 +1,15 @@
+torch>=2.5
+torchvision>=0.20
+numpy>=1.26
+matplotlib>=3.8
+tqdm>=4.66
+jupyterlab>=4.2
+ipykernel>=6.29
+nbformat>=5.10
+nbconvert>=7.16
+torchmetrics>=1.4
+tensorboard>=2.17
+# used from module 20 onward (Stable Diffusion via diffusers)
+diffusers>=0.30
+transformers>=4.44
+accelerate>=0.33
